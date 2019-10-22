@@ -39,8 +39,8 @@ def alpha_beta(board_object, ab, gamer, main):
         v = alpha_beta(copy.deepcopy(board_object).go(gamer, tg), sub_ab, -1 * gamer, False)
         sub.append(v)
         if ab and ((gamer == -1 and v > ab) or  # MAX player
-                   (gamer == 1 and v < ab)):  # MIN player.
-            return v  # CUT
+                   (gamer == 1 and v < ab)):    # MIN player.
+            return v                            # CUT
         sub_ab = max(sub) if gamer == -1 else min(sub)
 
     rc = max(sub) if gamer == -1 else min(sub)
@@ -69,18 +69,17 @@ def alpha_beta_symmetry(board_object, ab, gamer, main):
         pos = list(set(pos).difference('g', 'h', 'i'))
     if np.array_equal(b, b.T):
         pos = list(set(pos).difference('d', 'g', 'h'))
-    e_ = np.identity(b.shape[0])[:, ::-1]
-    if np.array_equal(b, e_.dot(b.T).dot(e_)):
+    if np.array_equal(np.rot90(b), np.rot90(b).T):
         pos = list(set(pos).difference('f', 'h', 'i'))
 
     sub = []
     sub_ab = None
     for tg in pos:
-        v = alpha_beta_symmetry(copy.deepcopy(board_object).go(gamer, tg), sub_ab, -1 * gamer, False)
+        v = alpha_beta_symmetry(copy.deepcopy(board_object).go(gamer, tg), sub_ab, -gamer, False)
         sub.append(v)
         if ab and ((gamer == -1 and v > ab) or  # MAX player
-                   (gamer == 1 and v < ab)):  # MIN player.
-            return v  # CUT
+                   (gamer == 1 and v < ab)):    # MIN player.
+            return v                            # CUT
         sub_ab = max(sub) if gamer == -1 else min(sub)
 
     rc = max(sub) if gamer == -1 else min(sub)

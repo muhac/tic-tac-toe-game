@@ -1,4 +1,5 @@
 import numpy as np
+from random import randint
 
 
 class Board(object):
@@ -8,6 +9,11 @@ class Board(object):
         self.D = 'No one'
 
         self.board = np.zeros([3, 3])
+
+        self.rot = randint(1, 4)         # to make games different visually
+        true_board = np.array(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i'])
+        show_board = np.rot90(true_board.reshape((3, 3)), self.rot).flatten()
+        self.map = dict(zip(show_board, true_board))
 
     def win_state(self):
         unfilled = np.sum(self.board == 0)
@@ -42,21 +48,19 @@ class Board(object):
         return self
 
     def draw(self, output=True):
-        blank = np.array(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i'])
+        true_board = np.array(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i'])
         filled = self.board.flatten()
-        available = []
+        available = [true_board[i] for i in range(9) if filled[i] == 0]
 
-        for i in range(9):
-            if filled[i] == 1:
-                blank[i] = 'X'
-            elif filled[i] == -1:
-                blank[i] = 'O'
-            else:
-                available.append(blank[i])
-
-        if output:
-            board = blank.reshape((3, 3))
-            for x in board:
+        if output:          # only the board shown to player is transformed
+            show_board = np.rot90(true_board.reshape((3, 3)), self.rot).flatten()
+            for i in range(9):
+                if filled[i] == 1:
+                    show_board[i] = 'X'
+                elif filled[i] == -1:
+                    show_board[i] = 'O'
+            show_board = np.rot90(show_board.reshape((3, 3)), -self.rot)
+            for x in show_board:
                 print(' '.join(x.tolist()))
 
         return available

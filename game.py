@@ -1,5 +1,6 @@
 import functions
 import minimax
+import os
 
 if __name__ == '__main__':
     b = functions.Board()
@@ -9,7 +10,7 @@ if __name__ == '__main__':
     while True:
         if gamer == 1:
             b.draw()
-            go = input('  -> ')
+            go = b.map[input('  -> ')]
         else:
             # go = minimax.british_museum(b, gamer, True)
             # go = minimax.alpha_beta(b, None, gamer, True)
@@ -24,3 +25,5 @@ if __name__ == '__main__':
             break
         else:
             gamer *= -1
+
+    os.system('pause')
