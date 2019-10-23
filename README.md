@@ -1,7 +1,13 @@
 # 井字棋 AI <sub>极小极大算法</sub>  
 # Tic Tac Toe AI <sub>Minimax Algorithm</sub>
 
-![Tic Tac Toe](https://github.com/bugstop/tic-tac-toe-ai-minimax/blob/master/readme_image/game.png)
+<br>
+
+How to play the game:
+
+![Tic Tac Toe](https://github.com/bugstop/tic-tac-toe-ai-minimax/blob/master/_readme_image/game.png)
+
+Here's the [Demo](https://muhan.li/game/tic-tac-toe/) (web version).
 
 <br>
 
@@ -19,7 +25,7 @@ The **British Museum algorithm** is a general approach to find a solution by che
 
 The **maximin value** of a player is the highest value that the player can be sure to get without knowing the actions of the other players; equivalently, it is the lowest value the other players can force the player to receive when they know the player's action.
 
-![MM](https://github.com/bugstop/tic-tac-toe-ai-minimax/blob/master/readme_image/mm.png)
+![MM](https://github.com/bugstop/tic-tac-toe-ai-minimax/blob/master/_readme_image/mm.png)
 
 <br>
 
@@ -27,7 +33,7 @@ The **maximin value** of a player is the highest value that the player can be su
 
 **Alpha–beta pruning** is a search algorithm that seeks to decrease the number of nodes that are evaluated by the minimax algorithm in its search tree.
 
-![AlphaBeta](https://github.com/bugstop/tic-tac-toe-ai-minimax/blob/master/readme_image/ab.png)
+![AlphaBeta](https://github.com/bugstop/tic-tac-toe-ai-minimax/blob/master/_readme_image/ab.png)
 
 The grayed-out subtrees don't need to be explored (when moves are evaluated from left to right), since we know the group of subtrees as a whole yields the value of an equivalent subtree or worse, and as such **cannot** influence the final result.
 
