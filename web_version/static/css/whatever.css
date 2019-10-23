@@ -1,0 +1,184 @@
+input {
+    outline: none;
+}
+
+.radio, .checkbox {
+    width: 1rem;
+    height: 1rem;
+    background-color: #f6f6e9;
+    border: solid 1px #13334c;
+    -webkit-border-radius: 0.1rem;
+    border-radius: 0.1rem;
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: inline-block;
+    vertical-align: center;
+    cursor: default;
+    -webkit-appearance: none; /**隐藏原生控件**/
+}
+
+.checkbox {
+    border-radius: 0.1rem;
+}
+
+/**选择后的样式**/
+.radio:checked, .checkbox:checked {
+    background-color: #f6f6e9;
+    border: solid 1px #13334c;
+    /*box-shadow: 0 1px 1px rgba(0,0,0,.1);*/
+    text-align: center;
+    background-clip: padding-box;
+    margin: 0;
+    padding: 0;
+}
+
+/**选择后 里面小对勾样式**/
+.radio:checked:before, .checkbox:checked:before {
+    content: '×';
+    display: block;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    font-weight: bold;
+    height: 1rem;
+    width: 1rem;
+    line-height: 1rem;
+    color: #fd5f00;
+    border-top: none;
+    border-right: none;
+    position: absolute;
+}
+
+
+.ul_box {
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    width: 470px;
+    text-align: center;
+}
+
+.ul_box > li {
+    padding: 10px 10px 0 10px;
+    overflow: hidden;
+    /*border-bottom: #e5e5e5 solid 1px;*/
+}
+
+.ul_box > li:last-child {
+    border-bottom: none;
+}
+
+.ul_box > li > div {
+    float: left;
+}
+
+.ul_box > li > div:nth-child(1) {
+    width: 100px;
+}
+
+.ul_box > li > div:nth-child(2) {
+    width: 470px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.label_box > label {
+    display: block;
+    float: left;
+    margin: 0 10px 10px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.label_box > label > input {
+    position: absolute;
+    top: 0;
+    left: -20px;
+}
+
+.label_box > label > div {
+    width: 140px;
+    text-align: center;
+    border: #13334c solid 1px;
+    height: 140px;
+    line-height: 140px;
+    user-select: none;
+    overflow: hidden;
+    position: relative;
+    font-size: 0;
+    background-color: #ffffff;
+}
+
+.label_box > label > div.active {
+    border: #d51917 solid 1px;
+    background-color: #f6f6e9;
+    color: #d51917;
+}
+
+.label_box > label > div.active:after {
+    content: '×';
+    display: block;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    font-size: 100px;
+    /*transform:rotate(45deg);*/
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1;
+}
+
+.label_box > label > div.active:before {
+    content: '';
+    display: block;
+    width: 3px;
+    height: 8px;
+    border-right: #ffffff solid 2px;
+    border-bottom: #ffffff solid 2px;
+    transform: rotate(35deg);
+    position: absolute;
+    bottom: 2px;
+    right: 4px;
+    z-index: 2;
+}
+
+.tree {
+    border: #005792 solid 1px !important;
+    background-color: #f6f6e9 !important;
+    color: #005792 !important;
+    font-size: 100px !important;
+    font-weight: bolder !important;
+}
+
+.human {
+    border: #fd5f00 solid 1px !important;
+    background-color: #f6f6e9 !important;
+    color: #fd5f00 !important;
+    font-size: 100px !important;
+    /*font-weight:bold !important;*/
+}
+
+.button {                           /* 按钮美化 */
+    width: 446px;                   /* 宽度 */
+    height: 50px;                   /* 高度 */
+    border-width: 0;                /* 边框宽度 */
+    border-radius: 3px;             /* 边框半径 */
+    background: #13334c;            /* 背景颜色 */
+    cursor: pointer;                /* 鼠标移入按钮范围时出现手势 */
+    outline: none;                  /* 不显示轮廓线 */
+    color: #f6f6e9;                 /* 字体颜色 */
+    font-size: 30px;                /* 字体大小 */
+    text-align: center;
+}
+
+.button:hover {                     /* 鼠标移入按钮范围时改变颜色 */
+    background: #005792;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
