@@ -1,15 +1,14 @@
 # 井字棋 AI <sub>极小极大算法</sub>  
 # Tic Tac Toe AI <sub>Minimax Algorithm</sub>
 
-<br>
+<br />
 
-How to play the game:
-
+How to play the game:  
 ![Tic Tac Toe](https://github.com/bugstop/tic-tac-toe-ai-minimax/blob/master/_readme_image/game.png)
 
-Here's the [Demo](https://muhan.li/game/tic-tac-toe/) (web version).
+Here's the <a href="https://muhan.li/game/tic-tac-toe/" target="_blank">Demo</a> (web version).
 
-<br>
+<br />
 
 ## Algorithms
 
@@ -17,17 +16,16 @@ Here's the [Demo](https://muhan.li/game/tic-tac-toe/) (web version).
 
 The **British Museum algorithm** is a general approach to find a solution by checking all possibilities one by one, beginning with the smallest.
 
-<br>
+<br />
 
 ### 2. Minimax
 
-**Minimax** is a decision rule for **minimizing** the possible loss for a worst case (**maximum** loss) scenario. When dealing with gains, it is referred to as "maximin" — to maximize the minimum gain.
-
+**Minimax** is a decision rule for **minimizing** the possible loss for a worst case (**maximum** loss) scenario. When dealing with gains, it is referred to as "maximin" — to maximize the minimum gain.  
 The **maximin value** of a player is the highest value that the player can be sure to get without knowing the actions of the other players; equivalently, it is the lowest value the other players can force the player to receive when they know the player's action.
 
 ![MM](https://github.com/bugstop/tic-tac-toe-ai-minimax/blob/master/_readme_image/mm.png)
 
-<br>
+<br />
 
 ### 3. Alpha–beta Pruning
 
