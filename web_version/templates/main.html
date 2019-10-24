@@ -10,7 +10,7 @@
 </style>
 
 <body style="width: 520px; color: #13334c">
-<h1 style="padding-left: 25px;">Tic Tac Toe <sup style="font-size: 70%">Demo</sup><sub style="font-size: 30%">by Muhan
+<h1 style="padding-left: 25px;">Tic Tac Toe <sup style="font-size: 70%; font-style: italic;">demo</sup><sub style="font-size: 30%;">by Muhan
     Li, Oct 24 / 19</sub></h1>
 <div style="padding-left: 25px;">
     <form method="post" accept-charset="utf-8">
@@ -39,7 +39,7 @@
     </div>
     {{game | safe}}
 
-    <div id='s' style="position: absolute; top: 680px; left: 25px;">
+    <div id='s' style="position: absolute; top: 680px; left: 45px;">
         {% if not win %}
         <button class="button">Next</button>
         {% else %}

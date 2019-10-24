@@ -175,7 +175,7 @@ input {
     text-align: center;
 }
 
-.button:hover {                     /* 鼠标移入按钮范围时改变颜色 */
+button:hover {                      /* 鼠标移入按钮范围时改变颜色 */
     background: #005792;
 }
 
