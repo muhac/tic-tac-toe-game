@@ -17,8 +17,6 @@
 
 The **British Museum algorithm** is a general approach to find a solution by checking all possibilities one by one, beginning with the smallest.
 
-<br />
-
 ### 2. Minimax
 
 **Minimax** is a decision rule for **minimizing** the possible loss for a worst case (**maximum** loss) scenario. When dealing with gains, it is referred to as "maximin" — to maximize the minimum gain.  
@@ -26,15 +24,13 @@ The **maximin value** of a player is the highest value that the player can be su
 
 ![MM](https://github.com/bugstop/tic-tac-toe-ai-minimax/blob/master/_readme_image/mm.png)
 
-<br />
-
 ### 3. Alpha–beta Pruning
 
 **Alpha–beta pruning** is a search algorithm that seeks to decrease the number of nodes that are evaluated by the minimax algorithm in its search tree.
 
 ![AlphaBeta](https://github.com/bugstop/tic-tac-toe-ai-minimax/blob/master/_readme_image/ab.png)
 
-The grayed-out subtrees don't need to be explored (when moves are evaluated from left to right), since we know the group of subtrees as a whole yields the value of an equivalent subtree or worse, and as such **cannot** influence the final result.
+The grayed-out subtrees don't need to be explored (when moves are evaluated from left to right), since we know the group of subtrees as a whole yields the value of an equivalent subtree or worse, and as such cannot influence the final result.
 
 The pseudo-code for depth limited minimax with alpha-beta pruning is as follows:
 
