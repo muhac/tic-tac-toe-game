@@ -3,10 +3,11 @@
 
 <br />
 
-How to play the game:  
-![Tic Tac Toe](https://github.com/bugstop/tic-tac-toe-ai-minimax/blob/master/_readme_image/game.png)
+### [**Demo**](https://muhan.li/game/tic-tac-toe/) <sup>*Flask*</sup>
 
-Here's the <a href="https://muhan.li/game/tic-tac-toe/" target="_blank">Demo</a> (web version).
+#### How to Play Tic Tac Toe
+
+![Tic Tac Toe](https://github.com/bugstop/tic-tac-toe-ai-minimax/blob/master/_readme_image/game.png)
 
 <br />
 
