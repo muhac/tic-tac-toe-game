@@ -15,7 +15,7 @@ if __name__ == '__main__':
             # go = minimax.british_museum(b, gamer, True)
             # go = minimax.alpha_beta(b, None, gamer, True)
             go = minimax.alpha_beta_symmetry(b, None, gamer, True)
-            print(f'     {go} <-')
+            print(f'     {b.map_inv[go]} <-')
 
         b.go(gamer, go)
         state = b.win_state()
