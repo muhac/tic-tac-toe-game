@@ -12,16 +12,14 @@ if __name__ == '__main__':
             b.draw()
             go = b.map[input('  -> ')]
         else:
-            # go = minimax.british_museum(b, gamer, True)
-            # go = minimax.alpha_beta(b, None, gamer, True)
-            go = minimax.alpha_beta_symmetry(b, None, gamer, True)
+            go = minimax.alpha_beta(b, None, gamer, True)
             print(f'     {b.map_inv[go]} <-')
 
         b.go(gamer, go)
         state = b.win_state()
         if state:
             b.draw()
-            print(state, 'wins.')
+            print(state)
             break
         else:
             gamer *= -1

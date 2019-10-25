@@ -4,27 +4,15 @@ import random
 import numpy as np
 
 
-def british_museum(board_object, gamer, main):
-    winner = board_object.win_state()
-    if winner:
-        score = {board_object.A: -1,
-                 board_object.D: 0,
-                 board_object.B: 1}
-        return score[winner]
-
-    pos = board_object.draw(False)
-    sub = [british_museum(copy.deepcopy(board_object).go(gamer, tg), -1 * gamer, False) for tg in pos]
-    rc = max(sub) if gamer == -1 else min(sub)
-    if main:
-        # return pos[sub.index(rc)]
-        index = [i for i in range(len(pos)) if sub[i] == rc]
-        random.shuffle(index)
-        return pos[index.pop()]
-    else:
-        return rc
-
-
 def alpha_beta(board_object, ab, gamer, main):
+    """
+    Search for the best choice.
+    :param board_object: current board
+    :param ab: alpha / beta value
+    :param gamer: max-player (ai, -1) or the min-player (human, 1)
+    :param main: whether it is called by the main function (need a choice instead of a value)
+    :return: the best position found
+    """
     winner = board_object.win_state()
     if winner:
         score = {board_object.A: -1,
@@ -32,60 +20,35 @@ def alpha_beta(board_object, ab, gamer, main):
                  board_object.B: 1}
         return score[winner]
 
-    pos = board_object.draw(False)
-    sub = []
-    sub_ab = None
-    for tg in pos:
-        v = alpha_beta(copy.deepcopy(board_object).go(gamer, tg), sub_ab, -1 * gamer, False)
-        sub.append(v)
-        if ab and ((gamer == -1 and v > ab) or  # MAX player
-                   (gamer == 1 and v < ab)):    # MIN player.
-            return v                            # CUT
-        sub_ab = max(sub) if gamer == -1 else min(sub)
+    next_step = board_object.draw(False)
 
-    rc = max(sub) if gamer == -1 else min(sub)
-    if main:
-        index = [i for i in range(len(pos)) if sub[i] == rc]
-        random.shuffle(index)
-        return pos[index.pop()]
-    else:
-        return rc
-
-
-def alpha_beta_symmetry(board_object, ab, gamer, main):
-    winner = board_object.win_state()
-    if winner:
-        score = {board_object.A: -1,
-                 board_object.D: 0,
-                 board_object.B: 1}
-        return score[winner]
-
-    pos = board_object.draw(False)
-
+    # find symmetry
     b = board_object.board
+    # horizontal
     if np.array_equal(b, b[:, ::-1]):
-        pos = list(set(pos).difference('c', 'f', 'i'))
+        next_step = list(set(next_step).difference('c', 'f', 'i'))
+    # vertical
     if np.array_equal(b, b[::-1, :]):
-        pos = list(set(pos).difference('g', 'h', 'i'))
+        next_step = list(set(next_step).difference('g', 'h', 'i'))
+    # diagonal
     if np.array_equal(b, b.T):
-        pos = list(set(pos).difference('d', 'g', 'h'))
+        next_step = list(set(next_step).difference('d', 'g', 'h'))
     if np.array_equal(np.rot90(b), np.rot90(b).T):
-        pos = list(set(pos).difference('f', 'h', 'i'))
+        next_step = list(set(next_step).difference('f', 'h', 'i'))
 
     sub = []
     sub_ab = None
-    for tg in pos:
-        v = alpha_beta_symmetry(copy.deepcopy(board_object).go(gamer, tg), sub_ab, -gamer, False)
+    for tg in next_step:
+        v = alpha_beta(copy.deepcopy(board_object).go(gamer, tg), sub_ab, -gamer, False)
         sub.append(v)
         if ab and ((gamer == -1 and v > ab) or  # MAX player
                    (gamer == 1 and v < ab)):    # MIN player.
             return v                            # CUT
         sub_ab = max(sub) if gamer == -1 else min(sub)
 
-    rc = max(sub) if gamer == -1 else min(sub)
     if main:
-        index = [i for i in range(len(pos)) if sub[i] == rc]
-        random.shuffle(index)
-        return pos[index.pop()]
+        candidates = [next_step[i] for i in range(len(next_step)) if sub[i] == sub_ab]
+        random.shuffle(candidates)
+        return candidates.pop()
     else:
-        return rc
+        return sub_ab
