@@ -30,17 +30,16 @@ def win_state(board):
 
 
 def go(board, gamer, position):
-    pos2arr = {'1': (0, 0), '2': (0, 1), '3': (0, 2),
-               '4': (1, 0), '5': (1, 1), '6': (1, 2),
-               '7': (2, 0), '8': (2, 1), '9': (2, 2)}
+    pos2arr = {0: (0, 0), 1: (0, 1), 2: (0, 2),
+               3: (1, 0), 4: (1, 1), 5: (1, 2),
+               6: (2, 0), 7: (2, 1), 8: (2, 2)}
     board[pos2arr[position]] = gamer
     return board
 
 
 def possible(board):
-    blank = np.array(['1', '2', '3', '4', '5', '6', '7', '8', '9'])
     filled = board.flatten()
-    available = [blank[i] for i in range(9) if filled[i] == 0]
+    available = [i for i in range(9) if filled[i] == 0]
     return available
 
 
@@ -52,11 +51,11 @@ def alpha_beta(board, ab, gamer, main):
                  "Tree wins.": 1}
         return score[winner]
 
-    pos = possible(board)
+    next_step = possible(board)
 
     sub = []
     sub_ab = None
-    for tg in pos:
+    for tg in next_step:
         v = alpha_beta(go(copy.deepcopy(board), gamer, tg), sub_ab, -gamer, False)
         sub.append(v)
         if ab and ((gamer == -1 and v > ab) or  # MAX player
@@ -64,10 +63,9 @@ def alpha_beta(board, ab, gamer, main):
             return v                            # CUT
         sub_ab = max(sub) if gamer == -1 else min(sub)
 
-    rc = max(sub) if gamer == -1 else min(sub)
     if main:
-        index = [i for i in range(len(pos)) if sub[i] == rc]
+        index = [i for i in range(len(next_step)) if sub[i] == sub_ab]
         random.shuffle(index)
-        return pos[index.pop()]
+        return next_step[index.pop()]
     else:
-        return rc
+        return sub_ab

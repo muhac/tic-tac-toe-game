@@ -1,6 +1,5 @@
 import minimax
 import numpy as np
-import random
 from flask import Flask, render_template, request
 
 app = Flask(__name__)
@@ -24,14 +23,15 @@ def index():
     winner = ''
     board = np.zeros(9)
 
+    # start game
     if request.form.get('p'):
         if request.form.get('p') == 'T':
-            board = [-1, 0, 0, 0, 0, 0, 0, 0, 0]
-            random.shuffle(board)
-            board = np.array(board)
+            board = np.array([-1, 0, 0, 0, 0, 0, 0, 0, 0])
+            np.random.shuffle(board)
         else:
             board = np.zeros(9)
 
+    # next step
     if request.form.get('brd'):
         board = np.array([int(i) for i in request.form.get('brd').split('|')])
 
@@ -39,7 +39,8 @@ def index():
             board[int(request.form.get('box'))] = 1
             winner = minimax.win_state(board.reshape(3, 3))
             if not winner:
-                board[int(minimax.alpha_beta(board.reshape(3, 3), None, -1, True)) - 1] = -1
+                choice = minimax.alpha_beta(board.reshape(3, 3), None, -1, True)
+                board[choice] = -1
                 winner = minimax.win_state(board.reshape(3, 3))
 
     brd = '|'.join([str(int(i)) for i in board.tolist()])
