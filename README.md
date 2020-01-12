@@ -3,7 +3,7 @@
 
 <br />
 
-### [**Demo**](https://muhan.li/game/tic-tac-toe/) <sup>*Flask*</sup>
+### [**Demo**](/) <sup>*维护中*</sup>
 
 #### How to Play Tic Tac Toe
 
