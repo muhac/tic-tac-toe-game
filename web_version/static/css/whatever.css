@@ -36,12 +36,12 @@ input {
 
 /**选择后 里面小对勾样式**/
 .radio:checked:before, .checkbox:checked:before {
-    content: '×';
+    content: '√';
     display: block;
     z-index: 1;
     margin: 0;
     padding: 0;
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: bold;
     height: 1rem;
     width: 1rem;
@@ -50,6 +50,8 @@ input {
     border-top: none;
     border-right: none;
     position: absolute;
+    left: -2px;
+    transform: rotate(15deg);
 }
 
 
@@ -104,7 +106,7 @@ input {
     text-align: center;
     border: #13334c solid 1px;
     height: 140px;
-    line-height: 140px;
+    line-height: 175px;
     user-select: none;
     overflow: hidden;
     position: relative;
@@ -119,12 +121,12 @@ input {
 }
 
 .label_box > label > div.active:after {
-    content: '×';
+    content: 'X';
     display: block;
     width: 100px;
     height: 100px;
-    line-height: 100px;
-    font-size: 100px;
+    line-height: 140px;
+    font-size: 105px;
     /*transform:rotate(45deg);*/
     position: absolute;
     bottom: 20px;
@@ -158,8 +160,8 @@ input {
     border: #fd5f00 solid 1px !important;
     background-color: #f6f6e9 !important;
     color: #fd5f00 !important;
-    font-size: 100px !important;
-    /*font-weight:bold !important;*/
+    font-size: 105px !important;
+    font-weight: lighter !important;
 }
 
 .button {                           /* 按钮美化 */
@@ -167,12 +169,13 @@ input {
     height: 50px;                   /* 高度 */
     border-width: 0;                /* 边框宽度 */
     border-radius: 3px;             /* 边框半径 */
-    background: #13334c;            /* 背景颜色 */
+    background: #13334c;          /* 背景颜色 */
     cursor: pointer;                /* 鼠标移入按钮范围时出现手势 */
     outline: none;                  /* 不显示轮廓线 */
-    color: #f6f6e9;                 /* 字体颜色 */
+    color: #f6f6e9;               /* 字体颜色 */
     font-size: 30px;                /* 字体大小 */
     text-align: center;
+    font-family: myFont;
 }
 
 button:hover {                      /* 鼠标移入按钮范围时改变颜色 */

@@ -10,15 +10,15 @@ def draw_board(brd):
     b = ''
     for i in range(9):
         if brd[i] == 0:
-            b += f'<label><input type="radio" name="box" value="{i}"><div>Muhan Li</div></label>'
+            b += f'<label><input type="radio" name="box" value="{i}"><div>©</div></label>'
         elif brd[i] == -1:
             b += '<label><input type="radio" name="box" disabled><div class="tree">○</div></label>'
         else:
-            b += '<label><input type="radio" name="box" disabled><div class="human">×</div></label>'
+            b += '<label><input type="radio" name="box" disabled><div class="human">X</div></label>'
     return b
 
 
-@app.route('/game/tic-tac-toe/', methods=('GET', 'POST'))
+@app.route('/demo/tic-tac-toe/', methods=('GET', 'POST'))
 def index():
     winner = ''
     board = np.zeros(9)
@@ -51,4 +51,4 @@ def index():
                            display=display, win=winner)
 
 
-app.run(port=1024)
+app.run(port=30001)

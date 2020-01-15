@@ -3,17 +3,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=0.65, minimum-scale=0.3, maximum-scale=2.0, user-scalable=yes" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
-<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/whatever.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='demo/tic-tac-toe/static/css/whatever.css') }}">
 <style type="text/css">
     /* Mobile Devices*/
     @media screen and (min-width: 520px) {body {position: absolute; top: 50%; left: 50%; margin-top: -400px; margin-left: -260px;} #s {left: 25px !important;} } 
 </style>
+<style>
+    @font-face {
+        font-family: myFont;
+        src: url("https://static.isaacx.com/font/x/GillSansMTPro/GillSansMTPro-Book.OTF") format('opentype');
+    }
+</style>
 
-<body style="width: 520px; color: #13334c">
-<h1 style="padding-left: 25px;"><a href="https://github.com/bugstop/tic-tac-toe-ai-minimax" style="text-decoration: none; color: #13334c;">Tic Tac Toe <sup style="font-size: 70%; font-style: italic;">demo</sup></a><sub style="font-size: 30%;">by Muhan Li, Oct 24 / 19</sub></h1>
+<body style="width: 520px; color: #13334c; font-family: myFont;">
+<h1 style="padding-left: 25px;"><a href="https://github.com/bugstop/tic-tac-toe-ai-minimax" style="text-decoration: none; color: #13334c;">Tic Tac Toe <sup style="font-size: 70%; font-style: italic; left: 5px; position: relative;">demo</sup></a><sub style="font-size: 40%; left: 50px; position: relative;">by Muhan Li,&thinsp;&thinsp;&thinsp;&thinsp;Oct 24 / 19</sub></h1>
 <div style="padding-left: 25px;">
     <form method="post" accept-charset="utf-8">
-        <button class="button" style="position: absolute; top: 100px; left: 280px; width: 150px; font-size: 20px;">(re-)
+        <button class="button" style="position: absolute; top: 100px; left: 280px; width: 150px; font-size: 25px;">(re-)
             Start
         </button>
         <label>
@@ -40,15 +46,15 @@
 
     <div id='s' style="position: absolute; top: 680px; left: 45px;">
         {% if not win %}
-        <button class="button">Next</button>
+        <button class="button" style="line-height: 60px;">Next</button>
         {% else %}
-        <div class="button" style="line-height: 50px;">{{win}}</div>
+        <div class="button" style="line-height: 60px;">{{win}}</div>
         {% endif %}
     </div>
 
 </form>
 
-<script type=text/javascript src="{{ url_for('static', filename='js/jquery-1.9.1.min.js') }}"></script>
+<script type=text/javascript src="{{ url_for('static', filename='demo/tic-tac-toe/static/js/jquery-1.9.1.min.js') }}"></script>
 <script type="text/javascript">
     $.fn.extend({
         hlRadio: function () {
@@ -75,6 +81,13 @@
 </body>
 
 <script>
-document.oncontextmenu=new Function("event.returnValue=false;");
-document.onselectstart=new Function("event.returnValue=false;");
+    document.oncontextmenu = function () { return false; };
+	document.onselectstart = function () { return false; };
+	document.oncopy = function () { return false; };
+	document.oncut = function () { return false; };
+	document.onpaste = function () { return false; };
+	document.ondragstart = function () { return false; };
+	document.addEventListener('keydown', (event) => { if (event.keyCode === 123) { event.preventDefault(); } })                                    // Prevent F12
+	document.addEventListener('keydown', (event) => { if (event.ctrlKey && event.shiftKey && event.keyCode == 73) { event.preventDefault(); } })   // Prevent Ctrl+Shift+I
+	document.addEventListener('keydown', (event) => { if (event.ctrlKey && event.shiftKey && event.keyCode == 74) { event.preventDefault(); } })   // Prevent Ctrl+Shift+J
 </script>
