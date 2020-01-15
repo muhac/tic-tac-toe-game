@@ -1,15 +1,15 @@
-# 井字棋 AI <sub>极小极大算法</sub>  
-# Tic Tac Toe AI <sub>Minimax Algorithm</sub>
+# 井字棋 <sub>极小极大算法</sub>  
+# Tic Tac Toe <sub>Minimax Algorithm</sub>
 
-<br />
+<br>
 
-### [**Demo**](/) <sup>*维护中*</sup>
+### [***Demo***](http://bugstop.site/demo/tic-tac-toe/)
 
 #### How to Play Tic Tac Toe
 
 ![Tic Tac Toe](https://github.com/bugstop/tic-tac-toe-ai-minimax/blob/master/_readme_image/game.png)
 
-<br />
+<br>
 
 ## Algorithms
 
