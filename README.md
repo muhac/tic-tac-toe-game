@@ -1,7 +1,8 @@
 # 井字棋 <sub>极小极大算法</sub>  
 # Tic Tac Toe <sub>Minimax Algorithm</sub>
 
-<br>
+[![LICENSE](https://img.shields.io/github/license/bugstop/tic-tac-toe-ai)](https://github.com/bugstop/tic-tac-toe-ai) 
+[![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu) <br>
 
 ### [***Demo***](http://bugstop.site/demo/tic-tac-toe/)
 
