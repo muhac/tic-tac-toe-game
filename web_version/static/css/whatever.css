@@ -118,6 +118,7 @@ input {
     border: #d51917 solid 1px;
     background-color: #f6f6e9;
     color: #d51917;
+    /*transition: color 1s;*/
 }
 
 .label_box > label > div.active:after {
@@ -129,7 +130,7 @@ input {
     font-size: 105px;
     /*transform:rotate(45deg);*/
     position: absolute;
-    bottom: 20px;
+    bottom: 22px;
     right: 20px;
     z-index: 1;
 }
@@ -152,14 +153,18 @@ input {
     border: #005792 solid 1px !important;
     background-color: #f6f6e9 !important;
     color: #005792 !important;
+    /*transition: color 1s !important;*/
     font-size: 100px !important;
     font-weight: bolder !important;
+    font-family: oFont !important;
+    line-height: 150px !important;;
 }
 
 .human {
     border: #fd5f00 solid 1px !important;
     background-color: #f6f6e9 !important;
     color: #fd5f00 !important;
+    /*transition: color 1s !important;*/
     font-size: 105px !important;
     font-weight: lighter !important;
 }
