@@ -12,7 +12,7 @@ def draw_board(brd):
         if brd[i] == 0:
             b += f'<label><input type="radio" name="box" value="{i}"><div>©</div></label>'
         elif brd[i] == -1:
-            b += '<label><input type="radio" name="box" disabled><div class="tree">○</div></label>'
+            b += '<label><input type="radio" name="box" disabled><div class="tree">O</div></label>'
         else:
             b += '<label><input type="radio" name="box" disabled><div class="human">X</div></label>'
     return b
