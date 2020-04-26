@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+   <link rel="stylesheet" href="css/style.css">
+   <title>Date Calculator</title>
+</head>
+
+<body id="main-body">
+
+<div id="mask" class="d-none"></div>
+
+<header>
+   <nav class="navbar navbar-light bg-light">
+      <a class="navbar-brand" href="http://tictactoe.game.demo.bugstop.site/JavaScript/">Tic Tac Toe</a>
+   </nav>
+</header>
+
+<div class="container">
+   <h1 class="text-center font-weight-light d-none d-sm-block" id="menu-head">Tic Tac Toe</h1>
+
+   <div class="row">
+      <div class="col-sm-2 col-lg-3"></div>
+      <div class="col-sm-8 col-lg-6" id="start">
+         <button type="button" class="btn btn-outline-info d-inline float-right"
+                 onclick="newGame();this.blur();">Restart</button>
+         <button type="button" class="btn btn-outline-secondary d-inline float-right"
+                 onclick="newGame(true);this.blur();">Computer First</button>
+      </div>
+   </div>
+
+   <div class="row">
+      <div class="col-sm-2 col-lg-3"></div>
+
+      <div class="col-sm-8 col-lg-6 row" id="board">
+
+         <div class="col-12 alert alert-warning" role="alert">Loading...</div>
+
+      </div>
+
+      <div class="col-12"></div>
+      <div class="col-1 col-sm-2 col-lg-3"></div>
+      <div class="col-sm-8 col-lg-6" id="winner"></div>
+   </div>
+
+   <div class="d-none" id="status"></div>
+</div>
+
+<footer>
+   <div class="accordion" id="accordionExample">
+      <div class="card">
+         <div class="card-header" id="headingThree">
+            <h2 class="mb-0">
+               <button class="btn btn-link collapsed text-decoration-none" type="button" data-toggle="collapse"
+                       data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" id="foot">
+                  Copyright &copy; 2020 bugstop.<span class="d-none d-sm-inline"> All Rights Reserved.</span>
+               </button>
+            </h2>
+         </div>
+         <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+            <div class="card-body">
+               <span>This page is hosted on <a href="https://pages.github.com" class="text-decoration-none text-info">
+                  GitHub Pages</a> from <a href="https://github.com/bugstop/tic-tac-toe-ai"
+                                           class="text-decoration-none text-info">this GitHub repository</a>
+                  maintained by <a href="https://github.com/bugstop"
+                                   class="text-decoration-none text-info">bogstop.</a></span>
+               <span class="d-none d-sm-block">Currently version 1.0, last updated on April 26, 2020. Source code licensed
+                  under the the <a href="https://github.com/bugstop/tic-tac-toe-ai/blob/master/LICENSE"
+                                   class="text-decoration-none text-info">MIT License.</a></span>
+            </div>
+         </div>
+      </div>
+   </div>
+</footer>
+
+<script src="js/jquery-3.4.1.slim.min.js"></script>
+<script src="umd/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/img.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>

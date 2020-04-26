@@ -5,7 +5,7 @@
 [![codebeat badge](https://codebeat.co/badges/afbdb8ea-e3bd-451b-923b-a659a68c5995)](https://codebeat.co/projects/github-com-bugstop-tic-tac-toe-ai-master) 
 [![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu) <br>
 
-### [***Demo***](http://bugstop.site/demo/tic-tac-toe/)
+### [***Demo***](http://tictactoe.game.demo.bugstop.site/JavaScript/)
 
 #### How to Play Tic Tac Toe
 
