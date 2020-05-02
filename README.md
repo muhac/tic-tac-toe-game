@@ -1,6 +1,7 @@
 # 井字棋 <sub>极小极大算法</sub>  
 # Tic Tac Toe <sub>Minimax Algorithm</sub>
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/46c74d713b1843eb89332b3769fa2a9a)](https://app.codacy.com/manual/bugstop/tic-tac-toe-ai?utm_source=github.com&utm_medium=referral&utm_content=bugstop/tic-tac-toe-ai&utm_campaign=Badge_Grade_Settings)
 [![LICENSE](https://img.shields.io/github/license/bugstop/tic-tac-toe-ai)](https://github.com/bugstop/tic-tac-toe-ai) 
 [![codebeat badge](https://codebeat.co/badges/afbdb8ea-e3bd-451b-923b-a659a68c5995)](https://codebeat.co/projects/github-com-bugstop-tic-tac-toe-ai-master) 
 [![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu) <br>
