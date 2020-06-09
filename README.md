@@ -1,11 +1,10 @@
-# 井字棋 <sub>极小极大算法</sub>  
-# Tic Tac Toe <sub>Minimax Algorithm</sub>
+# 井字棋 <sub>&ensp;&emsp;&emsp;&emsp;<sup>极小极大算法</sup></sub> <br> Tic Tac Toe <sub>&emsp;<sup>Minimax Algorithm</sup></sub>
 
-[![LICENSE](https://img.shields.io/github/license/bugstop/tic-tac-toe-ai)](https://github.com/bugstop/tic-tac-toe-ai) 
-[![codebeat badge](https://codebeat.co/badges/afbdb8ea-e3bd-451b-923b-a659a68c5995)](https://codebeat.co/projects/github-com-bugstop-tic-tac-toe-ai-master) 
+[![LICENSE](https://img.shields.io/github/license/bugstop/tic-tac-toe-ai)](https://github.com/bugstop/tic-tac-toe-ai)
+[![codebeat badge](https://codebeat.co/badges/afbdb8ea-e3bd-451b-923b-a659a68c5995)](https://codebeat.co/projects/github-com-bugstop-tic-tac-toe-ai-master)
 [![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu) <br>
 
-### [***Demo***](http://tictactoe.game.demo.bugstop.site/JavaScript/)
+### [**_Demo_**](http://tictactoe.demo.bugstop.site/JavaScript/)
 
 #### How to Play Tic Tac Toe
 

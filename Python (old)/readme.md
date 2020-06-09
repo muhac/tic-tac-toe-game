@@ -1,9 +1,4 @@
-# 井字棋 <sub>极小极大算法</sub>  
-# Tic Tac Toe <sub>Minimax Algorithm</sub>
-
-<br>
-
-### [***Demo***](http://bugstop.site/demo/tic-tac-toe/)
+# 井字棋 <sub>&ensp;&emsp;&emsp;&emsp;<sup>极小极大算法</sup></sub> <br> Tic Tac Toe <sub>&emsp;<sup>Minimax Algorithm</sup></sub>
 
 #### How to Play Tic Tac Toe
 
