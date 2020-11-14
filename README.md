@@ -4,11 +4,11 @@
 [![codebeat badge](https://codebeat.co/badges/afbdb8ea-e3bd-451b-923b-a659a68c5995)](https://codebeat.co/projects/github-com-bugstop-tic-tac-toe-ai-master)
 [![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu) <br>
 
-### [**_Demo_**](http://tictactoe.demo.bugstop.site/JavaScript/)
+### [**_Demo_**](http://tictactoe.demo.lmh.li/)
 
 #### How to Play Tic Tac Toe
 
-![Tic Tac Toe](https://github.com/bugstop/tic-tac-toe-ai-minimax/blob/master/_readme_image/game.png)
+![TicTacToe](./img/game.png)
 
 <br>
 
@@ -23,13 +23,13 @@ The **British Museum algorithm** is a general approach to find a solution by che
 **Minimax** is a decision rule for **minimizing** the possible loss for a worst case (**maximum** loss) scenario. When dealing with gains, it is referred to as "maximin" — to maximize the minimum gain.  
 The **maximin value** of a player is the highest value that the player can be sure to get without knowing the actions of the other players; equivalently, it is the lowest value the other players can force the player to receive when they know the player's action.
 
-![MM](https://github.com/bugstop/tic-tac-toe-ai-minimax/blob/master/_readme_image/mm.png)
+![Minimax](./img/mm.png)
 
 ### 3. Alpha–beta Pruning
 
 **Alpha–beta pruning** is a search algorithm that seeks to decrease the number of nodes that are evaluated by the minimax algorithm in its search tree.
 
-![AlphaBeta](https://github.com/bugstop/tic-tac-toe-ai-minimax/blob/master/_readme_image/ab.png)
+![AlphaBeta](./img/ab.png)
 
 The grayed-out subtrees don't need to be explored (when moves are evaluated from left to right), since we know the group of subtrees as a whole yields the value of an equivalent subtree or worse, and as such cannot influence the final result.
 
