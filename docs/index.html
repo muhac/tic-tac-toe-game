@@ -16,7 +16,7 @@
 <header>
    <nav class="navbar navbar-light bg-light">
       <a class="navbar-brand" href="https://tictactoe.demo.lmh.li/">Tic Tac Toe</a>
-      <a href="https://github.com/bugstop/tic-tac-toe-game" class="badge badge-info">GitHub Repo</a>
+      <a href="https://github.com/bugstop/tic-tac-toe-game" class="badge badge-info">view on GitHub</a>
    </nav>
 </header>
 
@@ -26,17 +26,15 @@
    <div class="row">
       <div class="col-sm-2 col-lg-3"></div>
       <div class="col-sm-8 col-lg-6" id="start">
-         <button type="button" class="btn btn-outline-info d-inline float-right" 
-                 onclick="newGame();this.blur();">Restart</button>
-         <button type="button" class="btn btn-outline-secondary d-inline float-right" 
-                 onclick="newGame(true);this.blur();">Computer First</button>
+         <button type="button" class="btn btn-outline-info d-inline float-right" onclick="newGame();this.blur();">Restart Game</button>
+         <button type="button" class="btn btn-outline-secondary d-inline float-right" onclick="newGame(true);this.blur();">Computer First</button>
       </div>
    </div>
 
    <div class="row">
       <div class="col-sm-2 col-lg-3"></div>
       <div class="col-sm-8 col-lg-6 row" id="board">
-         <div class="col-12 alert alert-warning" role="alert">Loading...</div>
+         <div class="col-12 alert alert-info" role="alert">Loading...</div>
       </div>
       <div class="col-1 col-sm-2 col-lg-3"></div>
       <div class="col-sm-8 col-lg-6" id="winner"></div>
@@ -51,19 +49,19 @@
             <h2 class="mb-0">
                <button class="btn btn-link collapsed text-decoration-none" type="button" data-toggle="collapse"
                        data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" id="foot">
-                  Copyright &copy; 2020-2021 bugstop. <span class="d-none d-sm-inline">All Rights Reserved.</span>
+                  Copyright &copy; 2020-2021 bugstop. <span class="d-none d-sm-inline">All rights reserved.</span>
                </button>
             </h2>
          </div>
          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
             <div class="card-body">
                <span>
-                  This repository is maintained by <a class="text-decoration-none text-info" href="https://github.com/bugstop"
+                  This repository is maintained by <a class="text-decoration-none text-info" href="https://github.com/bugstop">
                   bugstop.</a> The source code is licensed under <a class="text-decoration-none text-info"
                   href="https://github.com/bugstop/tic-tac-toe-game/blob/master/LICENSE">the MIT License.</a>
                </span>
                <span class="d-none d-sm-block">
-                  Currently version 1.2.3, last updated on April 30, 2021.
+                  Last updated on April 30, 2021, version 1.2.5.
                </span>
             </div>
          </div>
